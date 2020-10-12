@@ -1,0 +1,52 @@
+import pygame
+
+CELL_DIM = 30
+WIDTH = 300
+GRID_WIDTH = 10
+HEIGHT = 600
+GRID_HEIGHT = 20
+
+BG_COLOR = (30,30,30)
+ACTIVE_BLOCK_COLOR = (175,0,140)
+LAYER_COLOR = (60,60,60)
+FULL_LAYER_COLOR = (87,87,90)
+SHADOW_COLOR=(25,25,17)
+
+# 010
+# 111
+# 000
+T_BLOCK = [[0,1,0],[1,1,1],[0,0,0]]
+
+# 010
+# 011
+# 001
+SL_BLOCK = [[0,1,0],[0,1,1],[0,0,1]]
+
+# 001
+# 011
+# 010
+SR_BLOCK = [[0,0,1],[0,1,1],[0,1,0]]
+
+# 0100
+# 0100
+# 0100
+# 0100
+I_BLOCK = [[0,1,0,0],[0,1,0,0],[0,1,0,0],[0,1,0,0]]
+
+# 100
+# 100
+# 110
+LL_BLOCK = [[1,0,0],[1,0,0],[1,1,0]]
+
+# 010
+# 010
+# 110
+LR_BLOCK = [[0,1,0],[0,1,0],[1,1,0]]
+
+# 11
+# 11
+O_BLOCK = [[1,1],[1,1]]
+
+SHAPES = [T_BLOCK,SL_BLOCK,SR_BLOCK,I_BLOCK,LL_BLOCK,LR_BLOCK,O_BLOCK]
+
+GAME_OVER = pygame.image.load("resources/game_over.png")
